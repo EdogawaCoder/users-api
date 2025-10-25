@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres_usersApi
+    environment:
+      POSTGRES_DB: bd_usersapi
+      POSTGRES_USER: edo_user
+      POSTGRES_PASSWORD: edo_pass
+    ports:
+    - "5435:5432"
+    networks:
+      - usersApi_network
+
+networks:
+  usersApi_network:
+    driver: bridge
