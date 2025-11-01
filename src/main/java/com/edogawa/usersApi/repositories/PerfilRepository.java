@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface ProfileslRepository extends JpaRepository<Perfil, UUID> {
+public interface ProfilelRepository extends JpaRepository<Perfil, UUID> {
 
     // Using JPQL to find a profile by name
     @Query("""
