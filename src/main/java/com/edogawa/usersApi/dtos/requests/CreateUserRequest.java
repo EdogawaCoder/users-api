@@ -1,4 +1,9 @@
 package com.edogawa.usersApi.dtos.requests;
 
-public class CreateUserRequest {
+public record CreateUserRequest (
+        String name,
+        String email,
+        String password
+){
+
 }

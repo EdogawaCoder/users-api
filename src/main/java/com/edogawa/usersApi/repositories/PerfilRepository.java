@@ -9,12 +9,12 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface ProfilelRepository extends JpaRepository<Perfil, UUID> {
+public interface PerfilRepository extends JpaRepository<Perfil, UUID> {
 
     // Using JPQL to find a profile by name
     @Query("""
             SELECT p FROM Perfil p
             WHERE p.name = :name
             """)
-    Perfil findByNName(@Param("name") String name);
+    Perfil findByName(@Param("name") String name);
 }
